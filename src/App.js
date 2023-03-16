@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import SendTask from './components/SendTask';
+import ToDo from './components/ToDo';
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     <>
       <h1>To-do List</h1>
       <SendTask setTask={setTask} task={task} list={list} setList={setList}/>
+      <ToDo />
     </>
   );
 }
