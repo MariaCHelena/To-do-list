@@ -1,9 +1,11 @@
 import './App.css';
+import SendTask from './components/SendTask';
 
 function App() {
   return (
     <>
-      <p>Hello World!</p>
+      <h1>To-do List</h1>
+      <SendTask />
     </>
   );
 }
