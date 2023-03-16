@@ -1,4 +1,4 @@
-function ToDoItem({id, title, delEvent, editEvent}){
+function ToDoItem({id, title, delEvent, editEvent, show, onEdit, setUpdate, endUpdate}){
     return (
         <>
             <li key={id}>

@@ -15,6 +15,11 @@ function App() {
     })
   }
 
+  const onEdit = () => {
+    setEdit(true);
+  }
+
+
   const setUpdate = (updatedText, id) => {
     setList(
       list.map((item) => {
@@ -26,11 +31,17 @@ function App() {
     )
   }
 
+  const handleUpdatedDone = (event) => {
+    if (event.key === 'Enter'){
+      setEdit(false);
+    }
+  }
+
   return (
     <>
       <h1>To-do List</h1>
       <SendTask setTask={setTask} task={task} list={list} setList={setList}/>
-      <ToDo toDoProps={list} delEvent={onDelete} editEvent={setUpdate}/>
+      <ToDo toDoProps={list} delEvent={onDelete} editEvent={setUpdate} show={edit} onEdit={onEdit} setUpdate={setUpdate} endUpdate={handleUpdatedDone}/>
     </>
   );
 }
