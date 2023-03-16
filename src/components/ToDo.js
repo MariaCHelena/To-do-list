@@ -1,11 +1,11 @@
 import ToDoItem from "./ToDoItem"
 
-function ToDo({toDoProps}){
+function ToDo({toDoProps, delEvent}){
     return (
         <>
             <ul>
                 {toDoProps.map(item => (
-                    <ToDoItem id={item.id} title={item.title}/>
+                    <ToDoItem id={item.id} title={item.title} delEvent={delEvent}/>
                 ))}
             </ul>
         </>
