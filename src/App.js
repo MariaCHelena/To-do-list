@@ -12,7 +12,7 @@ function App() {
     <>
       <h1>To-do List</h1>
       <SendTask setTask={setTask} task={task} list={list} setList={setList}/>
-      <ToDo />
+      <ToDo toDoProps={list}/>
     </>
   );
 }
