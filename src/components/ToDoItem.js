@@ -1,13 +1,28 @@
-function ToDoItem({id, title, delEvent, editEvent, show, onEdit, endUpdate}){
+import { useState } from 'react';
+
+function ToDoItem({id, title, delEvent, editEvent}){
+
+    const [edit, setEdit] = useState(false)
+
+    const onEdit = () => {
+        setEdit(true);
+    }
+
+    const endUpdate = (event) => {
+        if (event.key === 'Enter'){
+          setEdit(false);
+        }
+    }
+
     return (
         <>
             <li key={id}>
-                <div hidden={show}>
+                <div hidden={edit}>
                     <span>{title}</span>
                     <button onClick={() => delEvent(id)}>Delete</button>
                     <button onClick={onEdit}>Edit</button>
                 </div>
-                <input type="text" value={title} onChange={(e) => editEvent(e.target.value, id)} hidden={!show} onKeyDown={endUpdate}/>
+                <input type="text" value={title} onChange={(e) => editEvent(e.target.value, id)} hidden={!edit} onKeyDown={endUpdate}/>
             </li>
         </>
     )
