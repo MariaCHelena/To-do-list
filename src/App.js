@@ -41,7 +41,7 @@ function App() {
     <>
       <h1>To-do List</h1>
       <SendTask setTask={setTask} task={task} list={list} setList={setList}/>
-      <ToDo toDoProps={list} delEvent={onDelete} editEvent={setUpdate} show={edit} onEdit={onEdit} setUpdate={setUpdate} endUpdate={handleUpdatedDone}/>
+      <ToDo toDoProps={list} delEvent={onDelete} editEvent={setUpdate} show={edit} onEdit={onEdit} endUpdate={handleUpdatedDone}/>
     </>
   );
 }
