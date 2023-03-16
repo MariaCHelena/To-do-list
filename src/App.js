@@ -7,6 +7,7 @@ function App() {
 
   const [task, setTask] = useState('')
   const [list, setList] = useState([])
+  const [edit, setEdit] = useState(false)
 
   const onDelete = (id) => {
     setList((listItens) => {
@@ -14,11 +15,22 @@ function App() {
     })
   }
 
+  const setUpdate = (updatedText, id) => {
+    setList(
+      list.map((item) => {
+        if (item.id === id){
+          item.title = updatedText;
+        }
+        return item
+      })
+    )
+  }
+
   return (
     <>
       <h1>To-do List</h1>
       <SendTask setTask={setTask} task={task} list={list} setList={setList}/>
-      <ToDo toDoProps={list} delEvent={onDelete}/>
+      <ToDo toDoProps={list} delEvent={onDelete} editEvent={setUpdate}/>
     </>
   );
 }

@@ -1,11 +1,13 @@
-function ToDoItem({id, title, delEvent}){
+function ToDoItem({id, title, delEvent, editEvent}){
     return (
         <>
             <li key={id}>
-                <span>{title}</span>
-                <button onClick={() => delEvent(id)}>Delete</button>
-                <button>Edit</button>
-                <input type="text" />
+                <div>
+                    <span>{title}</span>
+                    <button onClick={() => delEvent(id)}>Delete</button>
+                    <button>Edit</button>
+                </div>
+                <input type="text" value={title} onChange={(e) => editEvent(e.target.value, id)}/>
             </li>
         </>
     )
