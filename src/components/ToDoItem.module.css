@@ -2,9 +2,14 @@
     text-decoration: line-through;
 }
 
+.checkBox{
+    align-self: flex-start;
+    margin-top: 7px;
+}
+
 .toDoItemWrapper{
     max-height: 200px;
-    overflow: hidden;
+    width: 100%;
     align-self: flex-start;
 
     display: flex;
@@ -13,10 +18,18 @@
 
 .listTitle{
     font-size: 20px;
+    width: inherit;
+    max-height: 200px;
+
+    overflow: auto;
 }
 
 .toDoButtonsWrapper button{
     margin-right: 10px;
+}
+
+.toDoButtonsWrapper {
+    margin-top: 10px;
 }
 
 .toDoExhibit{
@@ -25,5 +38,8 @@
     align-items: center;
 
     width: 300px;
-    padding: 10px 10px;
+    padding: 10px;
+    margin: 20px;
+
+    background-color: azure;
 }

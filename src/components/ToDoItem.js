@@ -18,17 +18,17 @@ function ToDoItem({item, delEvent, editEvent}){
     return (
         <>
             <li>
-                <div hidden={edit} className={Styles.toDoExhibit}>
+                <div className={Styles.toDoExhibit}>
                     <div className={Styles.toDoItemWrapper}>
-                        <input type="checkbox" className={Styles.checkBox}/>
-                        <span className={Styles.listTitle}>{item.title}</span>
+                        <input type="checkbox" className={Styles.checkBox} hidden={edit}/>
+                        <span className={Styles.listTitle} hidden={edit}>{item.title}</span>
+                        <input type="text" value={item.title} onChange={(e) => editEvent(e.target.value, item.id)} hidden={!edit} onKeyDown={endUpdate}/>
                     </div>
                     <div className={Styles.toDoButtonsWrapper}>
                         <button onClick={() => delEvent(item.id)}>Delete</button>
-                        <button onClick={onEdit}>Edit</button> 
+                        <button onClick={onEdit} hidden={edit}>Edit</button> 
                     </div>
                 </div>
-                <input type="text" value={item.title} onChange={(e) => editEvent(e.target.value, item.id)} hidden={!edit} onKeyDown={endUpdate}/>
             </li>
         </>
     )
