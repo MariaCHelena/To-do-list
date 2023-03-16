@@ -43,3 +43,10 @@
 
     background-color: azure;
 }
+
+.textareaEdit{
+    width: inherit;
+    height: 200px;
+    resize: none;
+    border: none;
+}

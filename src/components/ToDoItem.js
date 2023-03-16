@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Styles from './ToDoItem.module.css'
 
 function ToDoItem({item, delEvent, editEvent}){
@@ -6,6 +6,7 @@ function ToDoItem({item, delEvent, editEvent}){
     const [edit, setEdit] = useState(false)
 
     const onEdit = () => {
+        getTextHeight();
         setEdit(true);
     }
 
@@ -15,14 +16,25 @@ function ToDoItem({item, delEvent, editEvent}){
         }
     }
 
+    let textareaHeight = {}
+    const getHeight = useRef()
+    const [width, setWidth] = useState()
+    const getTextHeight = () => {
+        setWidth(getHeight.current.clientHeight)
+    }
+
+    if (edit){
+        textareaHeight.height = `${width}px`
+    }
+
     return (
         <>
             <li>
                 <div className={Styles.toDoExhibit}>
                     <div className={Styles.toDoItemWrapper}>
                         <input type="checkbox" className={Styles.checkBox} hidden={edit}/>
-                        <span className={Styles.listTitle} hidden={edit}>{item.title}</span>
-                        <input type="text" value={item.title} onChange={(e) => editEvent(e.target.value, item.id)} hidden={!edit} onKeyDown={endUpdate}/>
+                        <span className={Styles.listTitle} hidden={edit} ref={getHeight}>{item.title}</span>
+                        <textarea onChange={(e) => editEvent(e.target.value, item.id)} hidden={!edit} onKeyDown={endUpdate} className={Styles.textareaEdit} style={textareaHeight}>{item.title}</textarea>
                     </div>
                     <div className={Styles.toDoButtonsWrapper}>
                         <button onClick={() => delEvent(item.id)}>Delete</button>
