@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Styles from './ToDoItem.module.css'
 
-function ToDoItem({id, title, delEvent, editEvent}){
+function ToDoItem({item, delEvent, editEvent}){
 
     const [edit, setEdit] = useState(false)
 
@@ -17,14 +17,14 @@ function ToDoItem({id, title, delEvent, editEvent}){
 
     return (
         <>
-            <li key={id}>
+            <li>
                 <div hidden={edit}>
                     <input type="checkbox" className={Styles.checkBox}/>
-                    <span className={Styles.listTitle}>{title}</span>
-                    <button onClick={() => delEvent(id)}>Delete</button>
+                    <span className={Styles.listTitle}>{item.title}</span>
+                    <button onClick={() => delEvent(item.id)}>Delete</button>
                     <button onClick={onEdit}>Edit</button>
                 </div>
-                <input type="text" value={title} onChange={(e) => editEvent(e.target.value, id)} hidden={!edit} onKeyDown={endUpdate}/>
+                <input type="text" value={item.title} onChange={(e) => editEvent(e.target.value, item.id)} hidden={!edit} onKeyDown={endUpdate}/>
             </li>
         </>
     )

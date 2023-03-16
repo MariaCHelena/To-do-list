@@ -5,7 +5,7 @@ function ToDo({toDoProps, delEvent, editEvent}){
         <>
             <ul>
                 {toDoProps.map(item => (
-                    <ToDoItem id={item.id} title={item.title} delEvent={delEvent} editEvent={editEvent}/>
+                    <ToDoItem key={item.id} item={item} delEvent={delEvent} editEvent={editEvent}/>
                 ))}
             </ul>
         </>
