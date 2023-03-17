@@ -38,9 +38,9 @@ function ToDoItem({item, delEvent, editEvent}){
                         <textarea onChange={(e) => editEvent(e.target.value, item.id)} hidden={!edit} onKeyDown={endUpdate} className={Styles.textareaEdit} style={textareaHeight}>{item.title}</textarea>
                     </div>
                     <div className={Styles.toDoButtonsWrapper}>
-                        <label hidden={edit} htmlFor={`check${item.id}`}><GiCheckMark /></label>
-                        <span onClick={() => delEvent(item.id)}><GiTrashCan /></span>
-                        <span onClick={onEdit} hidden={edit}><GiPencilBrush /></span> 
+                        <label hidden={edit} htmlFor={`check${item.id}`} className={Styles.toDoButtons}><GiCheckMark /></label>
+                        <span onClick={() => delEvent(item.id)} className={Styles.toDoButtons}><GiTrashCan /></span>
+                        <span onClick={onEdit} hidden={edit} className={Styles.toDoButtons}><GiPencilBrush /></span> 
                     </div>
                 </div>
             </li>

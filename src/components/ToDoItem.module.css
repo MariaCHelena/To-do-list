@@ -53,3 +53,7 @@
     border: none;
     outline: none;
 }
+
+.toDoButtons{
+    cursor: pointer;
+}
