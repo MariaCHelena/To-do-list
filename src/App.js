@@ -28,7 +28,7 @@ function App() {
   return (
     <main>
       <section className={Styles.inputSection}>
-        <h1>To-do List</h1>
+        <h1 className={Styles.title}>Send Missions!</h1>
         <SendTask setTask={setTask} task={task} list={list} setList={setList}/>
       </section>
       <section className={Styles.outputSection}>
