@@ -1,6 +1,6 @@
 .toDoList{
     list-style: none;
-    padding: 0;
+    padding-right: 0 10px;
     
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
