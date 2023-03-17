@@ -32,6 +32,7 @@ function App() {
         <SendTask setTask={setTask} task={task} list={list} setList={setList}/>
       </section>
       <section className={Styles.outputSection}>
+        <h2 className={Styles.boardTitle}>Mission Bouletin Board</h2>
         <ToDo toDoProps={list} delEvent={onDelete} editEvent={setUpdate}/>
       </section>
     </main>

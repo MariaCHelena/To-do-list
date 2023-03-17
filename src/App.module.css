@@ -28,3 +28,7 @@ section {
 .outputSection{
     width: 60vw;
 }
+
+.boardTitle{
+    text-align: center;
+}
