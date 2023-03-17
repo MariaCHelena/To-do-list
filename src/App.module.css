@@ -14,7 +14,7 @@ main {
 }
 
 section {
-    height: 100vh;
+    height: 100%;
 }
 
 .inputSection{
@@ -22,11 +22,11 @@ section {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 38vw;
+    width: 35vw;
 }
 
 .outputSection{
-    width: 60vw;
+    width: 63vw;
 }
 
 .boardTitle{
