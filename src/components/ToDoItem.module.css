@@ -61,3 +61,7 @@
 .toDoButtons{
     cursor: pointer;
 }
+
+.toDoDecoration{
+    padding: 10px;
+}

@@ -56,6 +56,9 @@ main{
     font-family: "EnchantedLand";
     font-size: 60px;
     padding: 10px 0;
+
+    color: goldenrod;
+    text-shadow: 0.1px 0.1px 0.2em black;
 }
 
 .boardTitle::after{
