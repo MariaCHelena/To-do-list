@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+}
+
+section {
+    height: 100vh;
+}
+
+.inputSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 38vw;
+}
+
+.outputSection{
+    width: 60vw;
+}
