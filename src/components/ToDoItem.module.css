@@ -43,7 +43,9 @@
     padding: 10px;
     margin: 10px;
 
-    background-color: azure;
+    background-image: url(../pictures/paper1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover  ;
 
     text-align: center;
 }

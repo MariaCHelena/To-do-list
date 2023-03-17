@@ -1,7 +1,7 @@
 import ToDoItem from "./ToDoItem"
 import Styles from "./ToDo.module.css"
 
-function ToDo({toDoProps, delEvent, editEvent}){
+function ToDo({toDoProps, delEvent, editEvent, url}){
     return (
         <>
             <ul className={Styles.toDoList}>

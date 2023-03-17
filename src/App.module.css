@@ -35,15 +35,13 @@ main{
     display: flex;
     flex-direction: column;
     align-self: flex-start;
-    
-    padding: 0 10px;
 
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
 
-    background-image: url(pictures/boardWood.jpg);
+    background-image: url(pictures/woodBackground.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 .title{

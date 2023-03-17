@@ -28,11 +28,12 @@ function ToDoItem({item, delEvent, editEvent}){
         textareaHeight.height = `${width}px`
     }
 
+
     return (
         <>
             <li>
-                <div className={Styles.toDoExhibit}>
-                    <div className={Styles.toDoItemWrapper}>
+                <div className={Styles.toDoExhibit} style={{backgroundImage:`url(${item.url})`}}>
+                    <div className={Styles.toDoItemWrapper} >
                         <input type="checkbox" className={Styles.checkBox} id={`check${item.id}`} name={`check${item.id}`} hidden={edit}/>
                         <span className={Styles.listTitle} hidden={edit} ref={getHeight}>{item.title}</span>
                         <textarea onChange={(e) => editEvent(e.target.value, item.id)} hidden={!edit} onKeyDown={endUpdate} className={Styles.textareaEdit} style={textareaHeight}>{item.title}</textarea>
