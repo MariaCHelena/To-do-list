@@ -1,5 +1,6 @@
 .checkBox:checked ~ .listTitle{
     text-decoration: line-through;
+    opacity: 40%;
 }
 
 .checkBox{
@@ -20,6 +21,8 @@
     font-size: 20px;
     width: inherit;
     max-height: 200px;
+
+    margin-left: 8px;
 
     overflow: auto;
 }

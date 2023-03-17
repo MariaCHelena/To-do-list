@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
-import Styles from './ToDoItem.module.css'
+import Styles from './ToDoItem.module.css';
+import {GiTrashCan, GiPencilBrush} from 'react-icons/gi';
 
 function ToDoItem({item, delEvent, editEvent}){
 
@@ -37,8 +38,8 @@ function ToDoItem({item, delEvent, editEvent}){
                         <textarea onChange={(e) => editEvent(e.target.value, item.id)} hidden={!edit} onKeyDown={endUpdate} className={Styles.textareaEdit} style={textareaHeight}>{item.title}</textarea>
                     </div>
                     <div className={Styles.toDoButtonsWrapper}>
-                        <button onClick={() => delEvent(item.id)}>Delete</button>
-                        <button onClick={onEdit} hidden={edit}>Edit</button> 
+                        <span onClick={() => delEvent(item.id)}><GiTrashCan /></span>
+                        <span onClick={onEdit} hidden={edit}><GiPencilBrush /></span> 
                     </div>
                 </div>
             </li>
