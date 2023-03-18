@@ -5,6 +5,7 @@ import ToDo from './components/ToDo';
 import backgroundPaper1 from './pictures/paper1.jpg'
 import backgroundPaper2 from './pictures/paper2.jpg'
 import backgroundPaper3 from './pictures/paper3.jpg'
+import {GiCrossedSwords} from 'react-icons/gi'
 
 function App() {
 
@@ -32,7 +33,7 @@ function App() {
   return (
     <main>
       <section className={Styles.inputSection}>
-        <h1 className={Styles.title}>Send Missions!</h1>
+        <h1 className={Styles.title}><GiCrossedSwords style={{fontSize: `40px`, marginRight: `8px`}}/> Send Missions <GiCrossedSwords style={{fontSize: `40px`, marginLeft: `8px`}}/></h1>
         <SendTask setTask={setTask} task={task} list={list} setList={setList} background={backgroundImageToDos}/>
       </section>
       <section className={Styles.outputSection}>

@@ -36,9 +36,6 @@ main{
     flex-direction: column;
     align-self: flex-start;
 
-    border-bottom-left-radius: 15px;
-    border-top-left-radius: 15px;
-
     background-image: url(pictures/woodBackground.jpg);
     background-size: cover;
     background-repeat: repeat;
