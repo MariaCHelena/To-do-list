@@ -26,5 +26,34 @@
     border-radius: 10px;
     background-color: brown;
 
-    margin-top: 20px;
+    margin: 20px 0;
 }
+
+.buttonTypesWrapper input[type="radio"] {
+    display: none;
+}
+  
+.buttonTypesWrapper label {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    color: white;
+    font-weight: 500;
+}
+  
+.buttonTypesWrapper input[type="radio"]:checked+label {
+    text-decoration: underline;
+}
+
+.buttonTypesWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*
+    .radio:checked ~ .typeButtons{
+    border: 10px solid aqua;
+}
+*/

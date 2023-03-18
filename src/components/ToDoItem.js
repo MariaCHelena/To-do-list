@@ -41,7 +41,7 @@ function ToDoItem({item, delEvent, editEvent}){
                     </div>
                     <div className={Styles.toDoButtonsWrapper}>
                         <label hidden={edit} htmlFor={`check${item.id}`} className={Styles.toDoButtons}><GiCheckMark /></label>
-                        <span onClick={() => delEvent(item.id)} className={Styles.toDoButtons}><GiTrashCan /></span>
+                        <span onClick={() => delEvent(item.id)} className={Styles.toDoButtons} style={{fontSize:`20px`}}><GiTrashCan /></span>
                         <span onClick={onEdit} hidden={edit} className={Styles.toDoButtons}><GiPencilBrush /></span> 
                     </div>
                 </div>

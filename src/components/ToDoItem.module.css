@@ -32,6 +32,10 @@
 
 .toDoButtonsWrapper {
     margin-top: 10px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .toDoExhibit{
@@ -67,7 +71,7 @@
 .toDoDecoration{
     padding: 10px;
     display: flex;
-    width: 200px;
+    width: 180px;
     align-items: center;
     justify-content: space-around;
 }
