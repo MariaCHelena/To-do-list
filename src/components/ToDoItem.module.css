@@ -59,6 +59,7 @@
 .textareaEdit{
     width: inherit;
     height: 200px;
+    width: 100%;
     resize: none;
     border: none;
     outline: none;
