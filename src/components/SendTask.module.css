@@ -4,8 +4,8 @@
     padding: 5px 5px 5px 10px;
     font-size: 16px;
 
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
 
     width: 300px;
 }
@@ -13,6 +13,9 @@
 .sendButton{
     border: none;
 
+    height: 100%;
+    background-color: brown;
+    color: white;
     font-size: 16px;
     cursor: pointer;
     padding: 5px 15px 6px 15px;
@@ -21,12 +24,22 @@
     border-top-right-radius: 10px;
 }
 
+.sendButton:disabled{
+    opacity: 0.2;
+    text-decoration: line-through;
+    cursor: default;
+}
+
 .inputComponents{
-    border: 1px solid brown;
-    border-radius: 10px;
+    border: 3px solid brown;
+    border-radius: 18px;
     background-color: brown;
+    padding-left: 1px;
 
     margin: 20px 0;
+
+    display: flex;
+    align-items: center;
 }
 
 .buttonTypesWrapper input[type="radio"] {
@@ -39,6 +52,8 @@
     border-radius: 20px;
     color: white;
     font-weight: 500;
+
+    box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
   
 .buttonTypesWrapper input[type="radio"]:checked+label {

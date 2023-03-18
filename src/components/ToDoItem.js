@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import Styles from './ToDoItem.module.css';
-import {GiTrashCan, GiPencilBrush, GiCheckMark, GiAbstract066} from 'react-icons/gi';
+import {GiTrashCan, GiPaintBrush, GiCheckMark, GiAbstract066} from 'react-icons/gi';
 
 function ToDoItem({item, delEvent, editEvent}){
 
@@ -42,7 +42,7 @@ function ToDoItem({item, delEvent, editEvent}){
                     <div className={Styles.toDoButtonsWrapper}>
                         <label hidden={edit} htmlFor={`check${item.id}`} className={Styles.toDoButtons}><GiCheckMark /></label>
                         <span onClick={() => delEvent(item.id)} className={Styles.toDoButtons} style={{fontSize:`20px`}}><GiTrashCan /></span>
-                        <span onClick={onEdit} hidden={edit} className={Styles.toDoButtons}><GiPencilBrush /></span> 
+                        <span onClick={onEdit} hidden={edit} className={Styles.toDoButtons}><GiPaintBrush /></span> 
                     </div>
                 </div>
             </li>
