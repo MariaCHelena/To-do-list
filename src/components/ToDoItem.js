@@ -33,7 +33,7 @@ function ToDoItem({item, delEvent, editEvent}){
         <>
             <li>
                 <div className={Styles.toDoExhibit} style={{backgroundImage:`url(${item.url})`}}>
-                    <span className={Styles.toDoDecoration}><GiAbstract066 /></span>
+                    <span className={Styles.toDoDecoration} style={{color: item.color}}><GiAbstract066 />{item.type}<GiAbstract066 /></span>
                     <div className={Styles.toDoItemWrapper} >
                         <input type="checkbox" className={Styles.checkBox} id={`check${item.id}`} name={`check${item.id}`} hidden={edit}/>
                         <span className={Styles.listTitle} hidden={edit} ref={getHeight}>{item.title}</span>

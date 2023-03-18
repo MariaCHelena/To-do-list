@@ -66,4 +66,8 @@
 
 .toDoDecoration{
     padding: 10px;
+    display: flex;
+    width: 200px;
+    align-items: center;
+    justify-content: space-around;
 }
