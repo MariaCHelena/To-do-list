@@ -17,8 +17,6 @@
     cursor: pointer;
     padding: 5px 15px 6px 15px;
 
-    background-color: brown;
-
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -26,6 +24,7 @@
 .inputComponents{
     border: 1px solid brown;
     border-radius: 10px;
+    background-color: brown;
 
     margin-top: 20px;
 }

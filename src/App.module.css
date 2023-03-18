@@ -39,6 +39,10 @@ main{
     background-image: url(pictures/woodBackground.jpg);
     background-size: cover;
     background-repeat: repeat;
+
+    border-left: 8px solid black;
+
+    box-shadow: -5px 1px 10px 2px rgba(0, 0, 0, 0.6);
 }
 
 .title{
