@@ -30,11 +30,35 @@ function App() {
     )
   }
 
+  const [selected, setSelected] = useState()
+  const [disabled, setDisabled] = useState(true)
+ let color
+
+  const handleChange = event => {
+    setSelected(event.target.value)
+    setDisabled(false)
+
+    switch (selected) {
+      case 'mainMission':
+        color = `green`
+        break;
+      case 'sideMission':
+        color = `blue`
+        break
+      case 'event':
+        color = `red`
+        break
+        
+      default:
+        break;
+    }
+  }
+
   return (
     <main>
       <section className={Styles.inputSection}>
         <h1 className={Styles.title}><GiCrossedSwords style={{fontSize: `40px`, marginRight: `8px`}}/> Send Missions <GiCrossedSwords style={{fontSize: `40px`, marginLeft: `8px`}}/></h1>
-        <SendTask setTask={setTask} task={task} list={list} setList={setList} background={backgroundImageToDos}/>
+        <SendTask setTask={setTask} task={task} list={list} setList={setList} background={backgroundImageToDos} selected={selected} disabled={disabled} color={color} handleChange={handleChange}/>
       </section>
       <section className={Styles.outputSection}>
         <h2 className={Styles.boardTitle}>Mission Bouletin Board</h2>

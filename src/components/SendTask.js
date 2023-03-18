@@ -1,33 +1,8 @@
 import Styles from './SendTask.module.css'
-import {useState} from 'react'
 
 let nextId = 0
 
-function SendTask({setTask, task, setList, list, background}){
-
-    const [selected, setSelected] = useState()
-    const [disabled, setDisabled] = useState(true)
-    let color
-
-    const handleChange = event => {
-        setSelected(event.target.value)
-        setDisabled(false)
-
-        switch (selected) {
-            case 'mainMission':
-                color = `green`
-                break;
-            case 'sideMission':
-                color = `blue`
-                break
-            case 'event':
-                color = `red`
-                break
-        
-            default:
-                break;
-        }
-    }
+function SendTask({setTask, task, setList, list, background, selected, disabled, color, handleChange}){
 
     return (
         <>
