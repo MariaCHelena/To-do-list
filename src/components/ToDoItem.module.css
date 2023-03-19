@@ -44,16 +44,12 @@
     align-items: center;
 
     width: 300px;
-    padding: 10px;
+    padding: 20px;
     margin: 10px;
-
-    background-image: url(../pictures/paper1.jpg);
     background-repeat: no-repeat;
-    background-size: cover  ;
+    background-size: cover;
 
     text-align: center;
-
-    box-shadow: 0 5px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .textareaEdit{
