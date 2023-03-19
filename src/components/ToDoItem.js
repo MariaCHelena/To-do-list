@@ -37,7 +37,7 @@ function ToDoItem({item, delEvent, editEvent}){
                     <div className={Styles.toDoItemWrapper} >
                         <input type="checkbox" className={Styles.checkBox} id={`check${item.id}`} name={`check${item.id}`} hidden={edit}/>
                         <span className={Styles.listTitle} hidden={edit} ref={getHeight}>{item.title}</span>
-                        <textarea onChange={(e) => editEvent(e.target.value, item.id)} hidden={!edit} onKeyDown={endUpdate} className={Styles.textareaEdit} style={textareaHeight} value={item.title}></textarea>
+                        <textarea onChange={(e) => editEvent(e.target.value, item.id)} hidden={!edit} onKeyDown={endUpdate} className={Styles.textareaEdit} style={textareaHeight} value={item.title} maxLength='100'></textarea>
                     </div>
                     <div className={Styles.toDoButtonsWrapper}>
                         <label hidden={edit} htmlFor={`check${item.id}`} className={Styles.toDoButtons}><GiCheckMark /></label>
