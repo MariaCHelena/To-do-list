@@ -8,7 +8,7 @@ function SendTask({setTask, task, setList, list, background, selected, disabled,
     return (
         <>
             <div className={Styles.inputComponents}>
-                <input type="text" value={task} onChange={e => setTask(e.target.value)} className={Styles.inputText}/>
+                <input type="text" value={task} onChange={e => setTask(e.target.value)} className={Styles.inputText} maxLength='100'/>
                 <button disabled={disabled} onClick={() => {
                     setTask('');
                     setList([...list, {id: nextId++, title: task, url: background[Math.floor(Math.random() * background.length)], type: selected, color: colors[selected.split(" ").join("")]}])
