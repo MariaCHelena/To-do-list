@@ -1,7 +1,7 @@
 import Styles from './SendTask.module.css';
 import {GiFairyWand} from 'react-icons/gi';
 
-let nextId = 0
+let nextId = 1
 
 function SendTask({setTask, task, setList, list, background, selected, disabled, colors, handleChange}){
 

@@ -10,7 +10,7 @@ import {GiCrossedSwords} from 'react-icons/gi'
 function App() {
 
   const [task, setTask] = useState('')
-  const [list, setList] = useState([])
+  const [list, setList] = useState([{id: 0, title: "Type your mission, select it's type and send it to the board ;)", url: backgroundPaper2, type: 'Main Mission', color: 'darkblue'}])
   const backgroundImageToDos = [backgroundPaper1, backgroundPaper2, backgroundPaper3]
 
   const onDelete = (id) => {

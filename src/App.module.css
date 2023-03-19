@@ -17,6 +17,8 @@ main{
     justify-content: center;
 
     background-color: lightgoldenrodyellow;
+
+    font-family: system-ui, serif;
 }
 
 .inputSection{
