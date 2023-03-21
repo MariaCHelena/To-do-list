@@ -2,15 +2,15 @@ import Styles from './App.module.css';
 import { useState } from 'react';
 import SendTask from './components/SendTask';
 import ToDo from './components/ToDo';
-import backgroundPaper1 from './pictures/paper1.jpg'
-import backgroundPaper2 from './pictures/paper2.jpg'
-import backgroundPaper3 from './pictures/paper3.jpg'
+import backgroundPaper1 from './pictures/paper1.png'
+import backgroundPaper2 from './pictures/paper2.png'
+import backgroundPaper3 from './pictures/paper3.png'
 import {GiCrossedSwords} from 'react-icons/gi'
 
 function App() {
 
   const [task, setTask] = useState('')
-  const [list, setList] = useState([])
+  const [list, setList] = useState([{id: 0, title: "Type your mission, select it's type and send it to the board ;)", url: backgroundPaper2, type: 'Main Mission', color: 'darkblue'}])
   const backgroundImageToDos = [backgroundPaper1, backgroundPaper2, backgroundPaper3]
 
   const onDelete = (id) => {
